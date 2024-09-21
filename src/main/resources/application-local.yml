@@ -9,11 +9,11 @@ spring:
         - id: account-service
           uri: lb://accountServer  # Load balanced URI for the account service
           predicates:
-            - Path=/account/**
+            - Path=/accountServer/**
         - id: user-service
           uri: lb://userServer  # Load balanced URI for the account service
           predicates:
-            - Path=/user/**
+            - Path=/userServer/**
 eureka:
   client:
     serviceUrl:
